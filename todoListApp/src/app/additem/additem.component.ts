@@ -15,8 +15,8 @@ export class AdditemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-  arrayLista:Array<any> =[
+  //array de teste padrão, passando os dados daqui pro display
+  listadeTarefas:Array<any> =[
     "Lista item 1",
     "lista item 2"
   ]
@@ -25,8 +25,9 @@ export class AdditemComponent implements OnInit {
     this.nomeTarefa = event.target.value
   }
 
+  //adiciona o item como o primeiro do array
   adicionarItem(){
-    this.arrayLista.unshift(this.nomeTarefa)
+    this.listadeTarefas.unshift(this.nomeTarefa)
   }
 
 }

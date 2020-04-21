@@ -9,6 +9,7 @@ export class DisplayComponent implements OnInit {
 
   title = 'Ajustar Tarefas';
 
+  // decorator que espera os dados do array
   @Input() tarefas:Array<any>
 
   constructor() { }
