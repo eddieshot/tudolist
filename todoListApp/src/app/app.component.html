@@ -1,14 +1,6 @@
 <h1>{{titleIndex}}</h1>
-<app-additem></app-additem>
-<div class="card">
-  <ol>
-    <li>{{title}}
-      <button ><i class="far fa-trash-alt"></i></button> 
-      <button  ><i class="far fa-check-circle"></i></button> 
-      <!-- <button  ><i class="fas fa-check-circle"></i></button>  -->
-    </li>
-  </ol>
-</div>
+<app-additem #add></app-additem>
+<app-display [tarefas]="add.arrayLista"></app-display>
 
 <router-outlet></router-outlet>
 
