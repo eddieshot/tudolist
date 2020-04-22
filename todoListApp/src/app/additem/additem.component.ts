@@ -31,7 +31,6 @@ export class AdditemComponent implements OnInit {
    }else{
      let nome = this.nomeTarefa;
      let status = false;
-     console.log("add")
      this.todos.push(new Todo(nome, status));
    }
   } 

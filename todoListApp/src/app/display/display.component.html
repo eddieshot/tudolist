@@ -3,7 +3,7 @@
     <ol id="card">
       <!-- Operação que faz o data binding dos valores adicionados no array e passados através do decorator -->
       <li *ngFor="let item of todos">{{item.nome}}
-        <button (click)="status=!status"><i [ngClass]="status ? 'fas fa-check-circle' : 'far fa-check-circle'"></i></button>
+        <button (click)="item.status=!item.status"><i [ngClass]="item.status ? 'fas fa-check-circle' : 'far fa-check-circle'"></i></button>
         <button (click)="removerItem(item)" ><i class="far fa-trash-alt"></i></button> 
         <!-- <button  ><i class="fas fa-check-circle"></i></button>  -->
       </li>

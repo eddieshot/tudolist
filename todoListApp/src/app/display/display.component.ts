@@ -7,9 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DisplayComponent implements OnInit {
 
-  status:boolean = false;
   title = 'Ajustar Tarefas';
   show: boolean = true;
+
   // decorator que espera os dados do array
   @Input() todos: Array<any>
 
