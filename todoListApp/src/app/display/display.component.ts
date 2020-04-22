@@ -7,18 +7,30 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DisplayComponent implements OnInit {
 
+  status:boolean = false;
   title = 'Ajustar Tarefas';
-
+  show: boolean = true;
   // decorator que espera os dados do array
-  @Input() tarefas:Array<any>
+  @Input() todos: Array<any>
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-removerItem(item){
-let index:number = this.tarefas.indexOf(item);
-this.tarefas.splice(index,1);
-}
+  removerItem(item) {
+    let index: number = this.todos.indexOf(item);
+    this.todos.splice(index, 1);
+    if (this.todos.length == 0) {
+      this.show = false;
+    }
+  }
+
+  markAsDone(){
+   
+  }
+
+  markAsUndone(){
+    
+  }
 }
