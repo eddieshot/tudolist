@@ -26,11 +26,11 @@ export class DisplayComponent implements OnInit {
     }
   }
 
-  markAsDone(){
-   
-  }
-
-  markAsUndone(){
-    
+  markAsDone() {
+    let lista = this.todos
+    console.log("asa")
+    for (let item=0; item < lista.length; item++) {
+      lista[item].status != lista[item].status
+    }
   }
 }
