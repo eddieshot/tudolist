@@ -17,4 +17,8 @@ export class DisplayComponent implements OnInit {
   ngOnInit(): void {
   }
 
+removerItem(item){
+let index:number = this.tarefas.indexOf(item);
+this.tarefas.splice(index,1);
+}
 }
