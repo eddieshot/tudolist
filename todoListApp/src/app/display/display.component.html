@@ -1,10 +1,12 @@
 
-<div class="card">
-    <ol>
+<div  class="card">
+    <ol id="card">
       <!-- Operação que faz o data binding dos valores adicionados no array e passados através do decorator -->
-      <li *ngFor="let item of tarefas">{{item}}
+      <li *ngFor="let item of todos">{{item.nome}}
+        <!-- <button *ngIf="!item.status" (click)="markAsDone()"><i class="far fa-check-circle"></i></button> 
+        <button *ngIf="item.status" (click)="markAsUndone()"><i class="fas fa-check-circle"></i></button> -->
+        <button (click)="status=!status"><i [ngClass]="status ? 'fas fa-check-circle' : 'far fa-check-circle'"></i></button>
         <button (click)="removerItem(item)" ><i class="far fa-trash-alt"></i></button> 
-        <button  ><i class="far fa-check-circle"></i></button> 
         <!-- <button  ><i class="fas fa-check-circle"></i></button>  -->
       </li>
     </ol>
