@@ -27,7 +27,11 @@ export class AdditemComponent implements OnInit {
 
   //adiciona o item como o primeiro do array
   adicionarItem(){
-    this.listadeTarefas.unshift(this.nomeTarefa)
-  }
-
+   if (this.nomeTarefa == undefined || this.nomeTarefa == ""){
+     alert("Digite uma tarefa")
+   }else{
+     this.listadeTarefas.unshift(this.nomeTarefa)
+     console.log(this.listadeTarefas)
+   }
+  } 
 }
