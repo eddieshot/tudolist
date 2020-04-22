@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from '../models/todo';
 
 @Component({
   selector: 'app-additem',
@@ -10,16 +11,14 @@ export class AdditemComponent implements OnInit {
 
   nomeTarefa:string;
 
+  controle:number = 0
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
+
   }
 
-  //array de teste padrão, passando os dados daqui pro display
-  listadeTarefas:Array<any> =[
-    "Lista item 1",
-    "lista item 2"
-  ]
+  todos: Todo[] = []
 
   guardaTarefa(event){
     this.nomeTarefa = event.target.value
@@ -30,8 +29,10 @@ export class AdditemComponent implements OnInit {
    if (this.nomeTarefa == undefined || this.nomeTarefa == ""){
      alert("Digite uma tarefa")
    }else{
-     this.listadeTarefas.unshift(this.nomeTarefa)
-     console.log(this.listadeTarefas)
+     let nome = this.nomeTarefa;
+     let status = false;
+     console.log("add")
+     this.todos.push(new Todo(nome, status));
    }
   } 
 }
